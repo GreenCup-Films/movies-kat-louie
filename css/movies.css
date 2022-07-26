@@ -1,0 +1,78 @@
+body{
+    background-color: rgba(138, 115, 78, 0.45);
+}
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: #8a294f;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #06b95f;
+}
+.title{
+    text-align: center;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    text-shadow: 1px 1px rgba(84, 116, 53, 0.93);
+    color: #805151;
+    letter-spacing: 2px;
+}
+.subTitle{
+    font-family: "Roboto Light", sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow: 1px 1px rgba(84, 116, 53, 0.93);
+    color: #805151;
+    letter-spacing: 2px;
+    text-align: right;
+}
+.img1{
+    display: block;
+    height: 250px;
+    width: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+    opacity: 70%;
+}
+.button{
+    display: inline-block;
+    padding: 0.35em 1em;
+    background-color: #788c57;
+    border: 0.1em solid #672d2d;
+    margin: 20px 0.1em 10px;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: 500;
+    color: #805151;
+    text-align: center;
+    transition: all 0.2s;
+    vertical-align: center;
+    letter-spacing: 1px;
+}
+.button:hover{
+    color: #de8b8b;
+}
+@media all and ( max-width: 30em) {
+    .button{
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+.insert-quote-link{
+    color: #805151;
+    display: block;
+    margin: 0px 0.1em 20px;
+    padding: 0.35em 1em;
+}
+.insert-quote-link:hover{
+    color: #de8b8b;
+}
+
+.horizontalLIne{
+    margin: 0 25% 0 25%;
+    color: #b06d6d;
+}

@@ -6,13 +6,14 @@ const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 export default function Home(props) {
     return `
         <header>
-            <h1 class="title">Hello Jalopy!</h1>
+            <h1 class="title">GreenCup Films</h1>
         </header>
         <main>
             <div>
-                <img src="assets/jalopy1.jpeg" class="img1">
+            <img src="assets/posters/1.jpg" class="img1">
                 <hr class="horizontalLIne">
-                <button class="button">search for Jalopy</button>
+                <span>Don't know what to watch? here is the top 4 most watched movies</span>
+                <button class="button">Search</button>
                 <p class="para1">
                     This is the home page text.
                 </p>    
@@ -21,19 +22,11 @@ export default function Home(props) {
     `;
 }
 
-// export function HomeEvents() {
-//     // const authority = getUserRole();
-//     const user = getUser();
-//     if(!user) {
-//         showNotification("Welcome visitor", "secondary");
-//     } else {
-//         showNotification("Welcome " + user.userName, "info");
-//     }
-// }
 const imagePaths = [
-    "assets/jalopy1.jpeg",
-    "assets/jalopy2.jpeg",
-    "assets/jalopy3.jpeg"
+    "assets/posters/1.jpg",
+    "assets/posters/2.jpeg",
+    "assets/posters/3.jpg",
+    "assets/posters/4.jpg"
 ]
 let currentImageIndex = 1;
 
@@ -43,7 +36,7 @@ export function HomeEvents (){
         const img = document.querySelector(".img1");
         img.setAttribute("src", imagePaths[currentImageIndex]);
         currentImageIndex++;
-        if (currentImageIndex === 3){
+        if (currentImageIndex === 4){
             currentImageIndex = 0;
         }
     })
