@@ -16,7 +16,7 @@ export default function Navbar(props) {
           <a class="nav-link" href="#" data-link>Rent</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" data-link>About us</a>
+          <a class="nav-link" href="/about" data-link>About us</a>
         </li>
       </ul>
     </div>
