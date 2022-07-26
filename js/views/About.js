@@ -1,4 +1,4 @@
-// import {showNotification} from "../messaging.js";
+
 
 export default function About(props) {
     // language=HTML
@@ -10,26 +10,22 @@ export default function About(props) {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi illo possimus quis sit. Amet, aspernatur autem cum dicta doloremque eveniet fugit hic id mollitia neque nesciunt, obcaecati similique, voluptate.</p>
+                        <p id="about-text">Kat's fave movie quote</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img src="https://fer-uig.glitch.me?uuid=1" alt="Fake dev 1">
-                        <p>Fake Dev 1</p>
+                        <img src="assets/Pro-Kat.jpg" alt="picture of a developer">
+                        <p>Katherine "the magnificent" Gil</p>
                     </div>
                     <div class="col-4">
-                        <img src="https://fer-uig.glitch.me?uuid=2" alt="Fake dev 2">
-                        <p>Fake Dev 2</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="https://fer-uig.glitch.me?uuid=3" alt="Fake dev 3">
-                        <p>Fake Dev 3</p>
+                        <img src="../assets/SA-2022.jpg" alt="picture of a developer">
+                        <p>Louie "Magic Mic" Espinosa</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button id="change-about-text">Change About Text</button>
+                        <button id="change-about-text">Change for Louie's fave movie quote</button>
                     </div>
                     <div class="col-12">
                         <a href="/" data-link>Go Home</a>
@@ -40,11 +36,11 @@ export default function About(props) {
         </main>
     `;
 }
-function changeAboutText() {
-    document.querySelector("#about-text").innerText = "Hello World!";
+function changeAboutQuote() {
+    document.querySelector("#about-text").innerText = "Louie's fave movie quote!";
 }
 
 export function AboutEvents() {
-    // showNotification("Hey, a message!", "danger");
-    document.querySelector("#change-about-text").addEventListener("click", changeAboutText);
+
+    document.querySelector("#change-about-text").addEventListener("click", changeAboutQuote);
 }
