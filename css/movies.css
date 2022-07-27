@@ -143,13 +143,12 @@ div[class*=box] {
     color: aliceblue;
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-size: x-large;
-    
+}
 main{
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-wrap: wrap;width: 100%;
 }
 .mainDiv{
     width: 100%;

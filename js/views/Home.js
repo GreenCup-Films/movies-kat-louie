@@ -14,9 +14,7 @@ export default function Home(props) {
                 <hr class="horizontalLIne">
                 <span>Don't know what to watch? here is the top 4 most watched movies</span>
                 <button class="button">Search</button>
-                <p class="para1">
-                    This is the home page text.
-                </p>    
+                  
             </div>
         </main>
     `;
