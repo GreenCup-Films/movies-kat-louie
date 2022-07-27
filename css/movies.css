@@ -15,10 +15,21 @@ body::-webkit-scrollbar-thumb{
     height: 80vh;
     background-size: cover;
 }
-.img-dev {
+.img-dev1 {
     width: 100px;
     height: 100px;
     border-radius: 15px;
+    position: absolute;
+    bottom: 38%;
+    left: 33%;
+}
+.img-dev2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 38%;
+    right: 40%;
 }
 .about-txt {
     color: aliceblue;
