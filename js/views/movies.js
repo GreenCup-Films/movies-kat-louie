@@ -19,8 +19,6 @@ export default function movieView(props){
         </div>
         <div class="flip-card-back">
             <p class="moviesGoHere">
-                <h2>${movies[i].name}</h2>
-<!--            <img>-->
                 <h6>${movies[i].year}</h6>
                 <h5>${movies[i].genre}</h5>
                 <h5>Rating: ${movies[i].rating}</h5>
