@@ -6,10 +6,10 @@ const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 export default function Home(props) {
     return `
         <header>
-            <h1 class="title">GreenCup Films</h1>
+            <h1 class="title">GreenCup Cinema</h1>
         </header>
         <main>
-            <div>
+            <div class="mainDiv">
             <img src="assets/posters/1.jpg" class="img1">
                 <hr class="horizontalLIne">
                 <span>Don't know what to watch? here is the top 4 most watched movies</span>
@@ -24,7 +24,7 @@ export default function Home(props) {
 
 const imagePaths = [
     "assets/posters/1.jpg",
-    "assets/posters/2.jpeg",
+    "assets/posters/2.jpg",
     "assets/posters/3.jpg",
     "assets/posters/4.jpg"
 ]
