@@ -2,6 +2,7 @@ import Home, {HomeEvents} from "./views/Home.js";
 import About, {AboutEvents} from "./views/About.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
+import addMovieView, {addMovieEvent} from "./views/addMovie.js";
 
 /**
  * Returns the route object for a specific route based on the given URI
@@ -36,6 +37,13 @@ export default function router(URI) {
             state: {},
             uri: location.pathname,
             title: 'Loading...',
+        },
+        '/addMovie': {
+            returnView: addMovieView,
+            state: {},
+            uri: "/addMovie",
+            title: 'Add a new movie',
+            viewEvent: addMovieEvent
         }
     };
 
