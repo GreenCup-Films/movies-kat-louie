@@ -13,10 +13,10 @@ export default function Navbar(props) {
           <a class="nav-link active" aria-current="page" href="/movies" data-link>Movies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Rent</a>
+          <a class="nav-link" href="#" data-link>Rent</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/about" data-link>About us</a>
         </li>
       </ul>
     </div>
