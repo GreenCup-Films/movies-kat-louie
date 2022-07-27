@@ -1,6 +1,7 @@
-
+import createView from "../createView.js"
 export default function addMovieView (props) {
     return `
+
 <form class="container">
     <h1 class="">Add a movie</h1>
     <form>
@@ -12,6 +13,7 @@ export default function addMovieView (props) {
         
         <button class="form-control" id="insert-btn">Submit New</button>
     </form>
+    <a href="/" data-link>Go Home</a>
 </div>
 `;
 
@@ -29,18 +31,16 @@ function movieInput() {
     const movieInput = document.querySelector("#movieInput");
     const movieText = movieInput.value.trim();
 
-    // const actorInput = document.getElementById("actorInput");   We can use this if we allow input value for actor(s)
-    // let actorText = actorInput.value.trim();
+
 
     if(movieText.length < 1) {
         alert("Movie recommendation cannot be blank");
         return;
     }
-    // const newMovieAndActor = {
-    //     movie: movieText,
-    //     actor: actorText
-    // }
 
+const newMovie = {
+        movie: movieText
+}
     const requestOptions = {
         method: "POST",
         headers: {
@@ -54,7 +54,7 @@ function movieInput() {
                 alert("add movie error: " + response.status);
             } else {
                 alert("add movie success");
-                createView("/addMovie");
+                createView("/add-movie");
             }
         });
 
