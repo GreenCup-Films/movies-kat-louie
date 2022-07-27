@@ -10,6 +10,16 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
     background-color: #06b95f;
 }
+main{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.mainDiv{
+    width: 100%;
+}
 .title{
     text-align: center;
     font-family: "Roboto Light", sans-serif;

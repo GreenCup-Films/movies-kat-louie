@@ -2,7 +2,7 @@ import Home, {HomeEvents} from "./views/Home.js";
 import About, {AboutEvents} from "./views/About.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
-import addMovieView, {addMovieEvent} from "./views/addMovie.js";
+import addMovieView, {addMovieEvent} from "./views/add-movie.js";
 import movieView,{movieEvent} from "./views/movies.js";
 /**
  * Returns the route object for a specific route based on the given URI
@@ -13,14 +13,21 @@ export default function router(URI) {
     const routes = {
         '/': {
             returnView: Home,
-            state: {},
+            state: {
+                movies: {
+                    url: "https://confirmed-secretive-opal.glitch.me/movies"
+                }
+            },
             uri: '/',
             title: 'Home',
             viewEvent: HomeEvents
         },
         '/movies': {
             returnView: movieView,
-            state: {},
+            state: {
+                movies: {
+                    url: "https://confirmed-secretive-opal.glitch.me/movies"
+                    }},
             uri: '/movies',
             title: 'Movies',
             viewEvent: movieEvent
@@ -45,11 +52,11 @@ export default function router(URI) {
             uri: location.pathname,
             title: 'Loading...',
         },
-        '/addMovie': {
+        '/add-movie': {
             returnView: addMovieView,
             state: {},
-            uri: "/addMovie",
-            title: 'Add a new movie',
+            uri: "/add-movie",
+            title: 'Add Movie',
             viewEvent: addMovieEvent
         }
     };
