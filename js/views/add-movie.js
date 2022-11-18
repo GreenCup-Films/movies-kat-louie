@@ -6,14 +6,13 @@ export default function addMovieView (props) {
     <h1 class="">Add a movie</h1>
     <form>
         <label for="MovieInput" class="form-label">Add New Movie</label>
-        <input class="form-control" list="datalistOptions" id="movieInput" placeholder="Enter a new quote">
-        
-<!--        <label for="actorInput" class="form-label">Add New Actor</label>-->
-<!--        <input class="form-control" list="datalistOptions" id="actorInput" placeholder="Enter the authors name">-->
+        <input class="form-control" list="datalistOptions" id="movieInput" placeholder="Enter a new movie">
+        <label for="MovieInput" class="form-label">Add New Movie</label>
+        <input class="form-control" list="datalistOptions" id="movieInput" placeholder="Enter a new movie">
         
         <button class="form-control" id="insert-btn">Submit New</button>
     </form>
-    <a href="/" data-link>Go Home</a>
+    <a href="/movies" data-link>Movies</a>
 </div>
 `;
 
@@ -22,15 +21,11 @@ export default function addMovieView (props) {
 export function addMovieEvent () {
     const addMovieBtn = document.getElementById("insert-btn")
     addMovieBtn.addEventListener("click", movieInput)
-
 }
-
-
 function movieInput() {
 
     const movieInput = document.querySelector("#movieInput");
     const movieText = movieInput.value.trim();
-
 
 
     if(movieText.length < 1) {
@@ -38,15 +33,15 @@ function movieInput() {
         return;
     }
 
-const newMovie = {
-        movie: movieText
-}
+    const newMovie = {
+       name: movieText,
+    }
     const requestOptions = {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify([newMovie])
+        body: JSON.stringify(newMovie)
     }
     fetch("https://confirmed-secretive-opal.glitch.me/movies", requestOptions)
         .then(function(response) {
@@ -57,7 +52,9 @@ const newMovie = {
                 createView("/add-movie");
             }
         });
+    createView("/movies");
 
 }
+
 
 
