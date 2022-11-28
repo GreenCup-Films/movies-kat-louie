@@ -7,9 +7,6 @@ export default function addMovieView (props) {
     <form>
         <label for="MovieInput" class="form-label">Add New Movie</label>
         <input class="form-control" list="datalistOptions" id="movieInput" placeholder="Enter a new movie">
-        <label for="MovieInput" class="form-label">Add New Movie</label>
-        <input class="form-control" list="datalistOptions" id="movieInput" placeholder="Enter a new movie">
-        
         <button class="form-control" id="insert-btn">Submit New</button>
     </form>
     <a href="/movies" data-link>Movies</a>
